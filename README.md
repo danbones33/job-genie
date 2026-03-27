@@ -1,56 +1,43 @@
-# MCP Servers
+# Job Genie
 
-This repository contains implementations of Model Context Protocol (MCP) servers for various functionalities:
+An AI-powered job search and analysis platform. Search listings across multiple boards, get deep-dive company analysis, skills matching, and resume suggestions — all in one place.
 
-## Available Servers
+## Features
 
-### 1. Filesystem MCP Server
-Provides tools for interacting with the filesystem:
-- `readFile`: Read contents of a file
-- `listDirectory`: List contents of a directory
-- `writeFile`: Write content to a file
+- **Smart Job Search** — Filter by keywords, location, industry, salary range, and work type (remote / hybrid / on-site)
+- **Deep Dive Analysis** — Select any listing for AI-generated insights: company culture, employee reviews, salary benchmarks, market trends, skills gap assessment, and red flags
+- **Resume Matching** — Upload your resume (PDF) and get personalized suggestions for each role
+- **Save & Track** — Bookmark jobs and manage your pipeline
 
-### 2. SQLite MCP Server
-Provides tools for working with SQLite databases:
-- `connect`: Connect to a SQLite database
-- `query`: Execute SQL queries
+## Tech Stack
 
-## Installation
+- **Frontend:** React + TypeScript (Vite)
+- **Backend:** Express / Node.js
+- **AI Integration:** MCP (Model Context Protocol) servers for filesystem and database tooling
+
+## Getting Started
 
 ```bash
 # Install dependencies
 npm install
 
-# Build the project
-npm run build
+# Start the backend
+cd server && npm install && npm start
+
+# Start the frontend (in project root)
+npm run dev
 ```
 
-## Usage
+The app runs at `http://localhost:5173` with the API server on port `3000`.
 
-Start the servers individually:
+## Configuration
+
+Copy `.env.example` in the `server/` directory and fill in your keys:
 
 ```bash
-# Start Filesystem MCP Server
-npm run start:fs
-
-# Start SQLite MCP Server
-npm run start:sqlite
+cp server/.env.example server/.env
 ```
-
-## Development
-
-The project uses TypeScript and follows the Model Context Protocol specification. To develop:
-
-1. Install dependencies: `npm install`
-2. Make changes to the TypeScript files in the root directory
-3. Build: `npm run build`
-4. Test your changes
-
-## Requirements
-
-- Node.js >= 16
-- npm >= 7
 
 ## License
 
-Private repository - All rights reserved
+MIT
